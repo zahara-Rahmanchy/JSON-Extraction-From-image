@@ -1,0 +1,11 @@
+{
+    "functions": {
+      "api/**/*.js": {
+        "cors": {
+          "origin": "https://json-extraction-challenge.intellixio.com",
+          "methods": ["GET", "POST", "OPTIONS"]
+        }
+      }
+    }
+  }
+  
