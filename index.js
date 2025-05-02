@@ -115,7 +115,12 @@ const corsOptions = {
     credentials: true,
     methods: ['GET', 'POST', 'OPTIONS'],
   };
-  app.use(cors(corsOptions));
+  app.use( cors({
+    origin: 'https://json-extraction-challenge.intellixio.com',
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE',"OPTIONS"],
+  }));
+  app.options('*', cors(corsOptions));
 // === Routes ===
 app.get('/', (req, res) => {
   res.send('Hello from JSON Extraction API!');
