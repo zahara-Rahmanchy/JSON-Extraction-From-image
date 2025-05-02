@@ -108,14 +108,14 @@ const serverless = require('serverless-http');
 const app = express();
 
 // === CORS setup ===
-const corsOptions = {
-  origin: 'https://json-extraction-challenge.intellixio.com',
-  credentials: true,
-  methods: ['GET', 'POST', 'OPTIONS'],
-};
-app.use(cors(corsOptions));
-app.use(express.json({ limit: '10mb' }));
 
+app.use(express.json({ limit: '10mb' }));
+const corsOptions = {
+    origin: 'https://json-extraction-challenge.intellixio.com',
+    credentials: true,
+    methods: ['GET', 'POST', 'OPTIONS'],
+  };
+  app.use(cors(corsOptions));
 // === Routes ===
 app.get('/', (req, res) => {
   res.send('Hello from JSON Extraction API!');
