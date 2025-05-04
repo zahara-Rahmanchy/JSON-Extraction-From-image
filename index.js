@@ -185,7 +185,11 @@ async function extractJSONFromImage(buffer) {
 
   return result;
 }
+app.listen(port, () => {
+  console.log("port", port);
+});
 
-// === Export handler for Vercel ===
-module.exports = app;
-module.exports.handler = serverless(app);
+
+// // === Export handler for Vercel ===
+// module.exports = app;
+// module.exports.handler = serverless(app);
