@@ -104,7 +104,7 @@ const Jimp = require('jimp').default;
 const Tesseract = require('tesseract.js');
 const cors = require('cors');
 const serverless = require('serverless-http');
-
+const port = 3000;
 const app = express();
 
 // === CORS setup ===
