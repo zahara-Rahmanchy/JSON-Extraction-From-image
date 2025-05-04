@@ -11,8 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.9.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
+    "form-data": "^4.0.2",
     "jimp": "^0.22.10",
     "qrcode-reader": "^1.0.4",
     "serverless-http": "^3.2.0",
